@@ -11,6 +11,7 @@ body{
 		--azul:#273c61;
 		--rosado: #fe4170;
 		--gris: #959fac;
+		--azulgris: #eff5ff;
 		--borde:#ddd;
 		--gradiente: linear-gradient(90deg,#a91f73 0%,#ff4270 100%);
 	}
@@ -79,7 +80,7 @@ body{
 
 .subtitulo{
 	font-size: 16px;
-	color: var(--rosado);
+	color: var(--grid);
 	font-weight: 400;
 	margin-bottom: 60px;
 	line-height: 2;
@@ -284,4 +285,76 @@ h4.price/*esto significa que price es valido solo si esta asignado con un h4*/{
 	font-size: 36px;
 	font-weight: 300;
 	margin-top: 40px;
+}
+
+#signup input.form-control{
+	background-color: var(--azulgris);
+	color: var(--azul);
+	border: 0;
+	padding: 17px 20px;/*Los inputs de bootstrap no crecen por padding sino que por altura*/
+	height: inherit;/*esto quita la altura de bootstrap y pone la de css*/
+}
+
+/*xs <= 480px cell
+sm >480px y <= 1200px tableta
+md > 1200px computadora*/
+
+
+
+/*mobil*/
+@media (max-width:480px){
+	#top h2{
+		font-size: 30px;
+	}
+
+	#top{
+		background-size: cover;
+		background-position: top center;
+
+	}
+
+	header{
+		position: relative;
+	}
+
+	#delivery_payment article.text-right{
+		text-align: left !important;
+	}
+
+	#delivery_payment article,
+	#products article{/*esto se llama agrupamiento trabajo mas eficiente*/
+		margin-top: 30px;
+	}
+
+	#pricing h2,
+	.titulo-section{
+		font-size: 32px;
+		width:inherit;
+	}
+
+	#accordion .card-header{
+		font-size: 16px;
+	}
+
+	#accordion .card-body{
+		font-size: 14px;
+		padding-left: 25px;
+	}
+
+	#signup .btn-default{
+		width: 100%;
+	}
+
+	.navbar-nav{
+		text-align: center;
+	}
+
+	.navbar-nav .nav-item{
+		padding-left: 0 !important;
+	}
+}
+
+/*Tableta*/
+@media (min-width:481px) and (max-width:1200px){
+
 }
