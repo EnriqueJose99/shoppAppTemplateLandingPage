@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@1,400;1,500;1,600&display=swap');
+
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: #959fac;
+}
+
+:root{
+		--morado: #a91f73;
+		--azul:#273c61;
+		--rosado: #fe4170;
+		--gris: #959fac;
+		--azulgris: #eff5ff;
+		--borde:#ddd;
+		--gradiente: linear-gradient(90deg,#a91f73 0%,#ff4270 100%);
+	}
+
+.header-area.sticky {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+.header-area.sticky .navbar-default{
+	background-color: #884bdf;
+}
+
+.btn-default{
+	background: linear-gradient(90deg,#a91f73 0%,#ff4270 100%);
+	color: #fff !important;
+	padding: 17px 45px !important;
+	border: 0;
+	font-size: 14px;
+	font-weight: 600 !important;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn-default:hover{
+	transform: scale(0.9);
+	transition: all 0.3s ease-in-out;
+}
+
+#navbar .btn-default{ /*Aqui es que se puso fue que cuando en el navbar este el boton que solo se cambie en el
+	navbar*/
+	padding: 8px 35px !important;
+}
+
+#top{
+	background-image: url(../img/home-bg-01.png);
+	background-repeat: no-repeat;
+	background-size: contain; /*Contain aplica la imagen en su tamaño original*/
+	background-position: 700px top;
+	padding-bottom: 15%;
+}
+
+#top h2{
+	font-size: 50px;
+	color: #273c61;
+	padding-top: 40%;
+	margin-bottom: 30px;
+
+}
+
+#top h3{
+	color: #959fac;
+	font-size: 22px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+
+.titulo{
+	font-size: 30px;
+	color: var(--azul);
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+
+.subtitulo{
+	font-size: 16px;
+	color: var(--grid);
+	font-weight: 400;
+	margin-bottom: 60px;
+	line-height: 2;
+}
+
+#features .subtitulo{
+	width: 70%;
+	margin: 0 auto 60px; /*el primero 0 que no hay separacion arriba y, el auto el reconoce automiaticamente
+	cuanto es el valor mayor que aplicar a la pantalla, abajo y el 60 es para el left y bootom*/
+}
+
+#features h4{
+	font-size: 16px;
+	color: #273c61;
+	font-weight: 400;
+	margin: 20px 0;
+}
+
+#features img{
+	transition: all 0.3s ease;
+}
+
+#features img:hover{
+	transform: translateY(-20px); /*Transalte y, x es para moverlos arriba y abajo se
+	pone negativo para que vaya hacia arriba*/
+	transition: all 0.3s ease;
+}
+
+.subtitulo-rosado{
+	font-size: 18px;
+	color: #fe4170;
+	font-weight: 400;
+	margin: 20px 0 30px;
+}
+
+.section_separation{
+	padding: 8% 0;
+}/*No se pa que o que*/
+
+.sombra{
+	box-shadow: 2px 2px 40px 10px #eee;
+}
+
+#products article:nth-child(2){/*nth-child(2) el dos por que es el que esta a la derecha de la imagen*/
+	padding-left: 5%;
+}
+
+#delivery_payment article:nth-child(1){ /*1 es para la derecha pero desde el text*/
+	padding-right: 5%;
+}
+
+#pricing {
+	background-image: url(../img/home-bg-02.png);
+	background-repeat: no-repeat;
+	background-size: 200px top;
+	background-position: top;
+	padding-top:700px;
+	margin-top: -600px;
+}
+
+#pricing h2,
+.titulo-section{
+	font-size: 45px;
+	color: var(--azul);
+	font-weight: 500;
+	text-align: center;
+	width: 60%;
+	margin: 0 auto 40px;
+}
+
+.tarjeta{
+	text-align: center;
+	background-color: #fff;
+	padding: 40px;
+}
+
+.tarjeta h3{
+	color: var(--azul);
+	text-transform: uppercase;
+	font-size: 23px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.tarjeta h4{
+	font-size: 18px;
+	font-weight: 400;
+}
+
+h4.price/*esto significa que price es valido solo si esta asignado con un h4*/{
+	color: var(--rosado);
+	font-size: 48px;
+	font-weight: 500;
+	margin-top: 30px;
+}
+
+.tarjeta ul{
+	font-size: 18px;
+	font-weight: 400;
+	list-style: none; /*esto quita los puntitos de la listas*/
+	padding: 0;
+}
+
+.tarjeta ul li{
+	margin-bottom: 12px;
+}
+/*Esto es para usar los iconos de de Font Awesome con Uni cod*/
+.tarjeta ul li::before{
+	content: '\f00c';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
+	font-size: 16px;
+	color: var(--rosado);
+	padding-right: 5px;
+}
+
+.tarjeta:not(:nth-child(2)) .btn-default{
+	background: #fff;
+	border:1px solid var(--borde);
+	color: var(--gris) !important;
+}
+
+.tarjeta:not(:nth-child(2)) .btn-default:hover{
+	background: var(--gradiente);
+	color: #fff!important;
+}
+
+.tarjeta .btn-default{
+	width: 100%;
+	font-style: 18px;
+	margin-top: 60px;
+}
+
+.tarjeta .btn-default:hover{
+	transform: scale(1);
+	background: #fff;
+	border:1px solid var(--borde);
+	color: var(--gris) !important;
+}
+
+.tarjeta:nth-child(2){
+	z-index: 999;
+	border-top: 10px solid var(--rosado);
+}
+
+.tarjeta:not(:nth-child(2)){
+	margin-top: 20px;
+}
+
+#accordion .card{
+	border: 0;
+	border-bottom: 1px solid var(--borde);
+}
+
+#accordion .card-header{
+	background-color: #fff;
+	border: 0;
+	font-size: 24px;
+	font-weight: 300;
+	color: var(--azul);
+	cursor: pointer;/*Esto es para poner la mano para que aparazca como link */
+}
+
+#accordion .card-body{
+	font-size: 16px;
+	font-weight: 300;
+	padding-left: 65px;
+	line-height: 2;
+}
+
+#accordion .card-header.collapsed:before{
+	content: '\f0fe';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
+	font-size: 25px;
+	color: var(--azul);
+	padding-right: 15px;
+}
+
+#accordion .card-header:before{
+	content: '\f146';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
+	font-size: 25px;
+	color: var(--rosado);
+	padding-right: 15px;
+}
+
+.app{
+	width: 50%;
+	margin: 5% auto;
+}
+
+.app hr{
+	margin-top: 15%;
+}
+
+#signup h3.titulo{ /*Al ponerle el .titulo esto dice que solo si el h3 tiene .titulo solo a eso lo cambia
+	no afecta de manera global pero tiene que estar pegado*/
+	text-align: center;
+	color: var(--azul);
+	font-size: 36px;
+	font-weight: 300;
+	margin-top: 40px;
+}
+
+#signup input.form-control{
+	background-color: var(--azulgris);
+	color: var(--azul);
+	border: 0;
+	padding: 17px 20px;/*Los inputs de bootstrap no crecen por padding sino que por altura*/
+	height: inherit;/*esto quita la altura de bootstrap y pone la de css*/
+}
+
+/*xs <= 480px cell
+sm >480px y <= 1200px tableta
+md > 1200px computadora*/
+
+
+
+/*mobil*/
+@media (max-width:480px){
+	#top h2{
+		font-size: 30px;
+	}
+
+	#top{
+		background-size: cover;
+		background-position: top center;
+
+	}
+
+	header{
+		position: relative;
+	}
+
+	#delivery_payment article.text-right{
+		text-align: left !important;
+	}
+
+	#delivery_payment article,
+	#products article{/*esto se llama agrupamiento trabajo mas eficiente*/
+		margin-top: 30px;
+	}
+
+	#pricing h2,
+	.titulo-section{
+		font-size: 32px;
+		width:inherit;
+	}
+
+	#accordion .card-header{
+		font-size: 16px;
+	}
+
+	#accordion .card-body{
+		font-size: 14px;
+		padding-left: 25px;
+	}
+
+	#signup .btn-default{
+		width: 100%;
+	}
+
+	.navbar-nav{
+		text-align: center;
+	}
+
+	.navbar-nav .nav-item{
+		padding-left: 0 !important;
+	}
+}
+
+/*Tableta*/
+@media (min-width:481px) and (max-width:1200px){
+
+}
